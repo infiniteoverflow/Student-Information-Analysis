@@ -14,15 +14,15 @@ class Login:
         image = Image.open("images/login_bg.jpg")
         photo = ImageTk.PhotoImage(image)
         
+        # Setting the background
         self.c.create_image((0,0), image=photo, anchor="nw")
+        
+        # Setting the text
         self.c.create_text((100, 150), text="Student Information Analysis", fill="black", anchor="nw"
                            ,font=('newcenturyschlbk',30,'bold'))
-        
         self.c.create_text((280, 270), text="Login", fill="black", anchor="nw"
                            ,font=('latin modern typewriter',50,'bold'))
         
         # Defining the window
         self.c.pack()
         self.root.mainloop()
-
-c = Login()
