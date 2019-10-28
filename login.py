@@ -18,6 +18,9 @@ class Login:
         self.c.create_text((100, 150), text="Student Information Analysis", fill="black", anchor="nw"
                            ,font=('newcenturyschlbk',30,'bold'))
         
+        self.c.create_text((280, 270), text="Login", fill="black", anchor="nw"
+                           ,font=('latin modern typewriter',50,'bold'))
+        
         # Defining the window
         self.c.pack()
         self.root.mainloop()
