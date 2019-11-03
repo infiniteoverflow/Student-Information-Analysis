@@ -1,7 +1,7 @@
 from tkinter import *
 from PIL import Image, ImageTk
 
-import menu_page
+import screens.menu_page as menu
 
 class Login:
     def __init__(self):
@@ -65,6 +65,6 @@ class Login:
         print(password)
         
         self.root.destroy()
-        m = menu_page.Menu()
+        m = menu.Menu()
         
 
