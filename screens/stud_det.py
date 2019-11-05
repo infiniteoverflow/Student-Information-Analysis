@@ -1,5 +1,4 @@
 from tkinter import *
-
 from PIL import Image, ImageTk
 
 class StudentDetails:
@@ -34,4 +33,5 @@ class StudentDetails:
         def onClick1():
             bh = click()
         self.root.mainloop()
+
 
