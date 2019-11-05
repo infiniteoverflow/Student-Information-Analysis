@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 from screens.stud_det import *
 from screens.attendence import *
 from screens.electives import *
@@ -48,7 +49,6 @@ class Menu:
         def buttonClick1():
             #self.root.destroy()
             stud = StudentDetails()
-
         
         def buttonClick2():
             #self.root.destroy()

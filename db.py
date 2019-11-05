@@ -1,5 +1,4 @@
-# Python code to demonstrate table creation and 
-# insertions with SQL 
+''' Use this code to define your database tables and their data'''
 
 # importing module 
 import sqlite3 
