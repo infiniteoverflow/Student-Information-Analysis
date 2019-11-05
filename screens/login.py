@@ -67,4 +67,3 @@ class Login:
         self.root.destroy()
         m = menu.Menu()
         
-
