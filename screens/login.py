@@ -61,9 +61,14 @@ class Login:
         username = self.button1.get()
         password = self.button2.get()
         
-        print(username)
+        print(username.lower())
         print(password)
         
-        self.root.destroy()
-        m = menu.Menu()
+        username = username.lower()
+        password = password.lower()
+        
+        if username==password:
+            if username.startswith("1mv"):
+                self.root.destroy()
+                m = menu.Menu()
         
