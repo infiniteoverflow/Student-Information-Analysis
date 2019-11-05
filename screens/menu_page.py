@@ -1,4 +1,11 @@
 from tkinter import *
+from tkinter import messagebox
+from screens.stud_det import *
+from screens.attendence import *
+from screens.electives import *
+from screens.login import *
+from screens.marks import *
+from screens.placement import *
 from PIL import Image, ImageTk
 
 class Menu:
@@ -40,44 +47,23 @@ class Menu:
         self.b5.place(x=300,y=620,width=200,height=50)
 
         def buttonClick1():
-            master2 = Tk()
-            master2.geometry("800x800")
-            master2.title("Student-info")
-            label = Label(master2, text="This is the new window")
-            label.pack()
-            master2.mainloop()
-
+            #self.root.destroy()
+            stud = StudentDetails()
         
         def buttonClick2():
-            master2 = Tk()
-            master2.geometry("800x800")
-            master2.title("Attendence")
-            label = Label(master2, text="This is the new window")
-            label.pack()
-            master2.mainloop()
+            #self.root.destroy()
+            att = Attendence()
 
         def buttonClick3():
-            master2 = Tk()
-            master2.geometry("800x800")
-            master2.title("Marks")
-            label = Label(master2, text="This is the new window")
-            label.pack()
-            master2.mainloop()
+            #self.root.destroy()
+            marks = Marks()
 
         def buttonClick4():
-            master2 = Tk()
-            master2.geometry("800x800")
-            master2.title("Electives")
-            label = Label(master2, text="This is the new window")
-            label.pack()
-            master2.mainloop()
+            #self.root.destroy()
+            ele = Electives()
 
         def buttonClick5():
-            master2 = Tk()
-            master2.geometry("800x800")
-            master2.title("Placement-details")
-            label = Label(master2, text="This is the new window")
-            label.pack()
-            master2.mainloop()        
+            #self.root.destroy()
+            plac = Placement()       
 
         self.root.mainloop()
