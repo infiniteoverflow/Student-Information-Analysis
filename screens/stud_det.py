@@ -4,7 +4,7 @@ from screens.student import StudentData
 
 class StudentDetails:
     def __init__(self):
-        self.root = Tk()
+        self.root = Toplevel()
         self.root.geometry("500x500")
         self.root.title("Student Details")
         
