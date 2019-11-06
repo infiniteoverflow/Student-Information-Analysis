@@ -47,11 +47,11 @@ class Menu:
         self.b5.place(x=300,y=620,width=200,height=50)
 
         def buttonClick1():
-            #self.root.destroy()
+            self.root.destroy()
             stud=StudentDetails()
 
         def buttonClick2():
-            #self.root.destroy()
+            self.root.destroy()
             att = Attendence()
 
         def buttonClick3():

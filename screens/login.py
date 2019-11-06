@@ -71,4 +71,12 @@ class Login:
             if username.startswith("1mv"):
                 self.root.destroy()
                 m = menu.Menu()
+            else:
+                r = Tk()
+                r.title('Error!')
+                r.geometry('300x80')
+            
+                lbl = Label(r,text = 'Incorrect username or password!',font=('Times',13,'bold'))
+                lbl.pack()
+                r.mainloop()
         
