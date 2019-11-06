@@ -7,12 +7,20 @@ class StudentDetails:
         self.root = Tk()
         self.root.geometry("500x500")
         self.root.title("Student Details")
-        self.c = Canvas(self.root,bg = "pink",height=500,width=500,cursor='pencil')
+        
+
+
+        self.c = Canvas(self.root,bg = 'pink',height=500,width=500,cursor='pencil')
 
         
        # image = Image.open("images/login_bg.jpg")
        # photo = ImageTk.PhotoImage(image)
-       # self.c.create_image((0,0), image=photo, anchor="nw")
+        photo = PhotoImage(file = "images/epic.png")
+       # w = Label(self.root, image=photo)
+       # w.pack(
+        self.c.create_image((0,0), image=photo, anchor="nw")
+
+       
         
 
         # Setting the background
