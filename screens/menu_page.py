@@ -51,7 +51,7 @@ class Menu:
             stud=StudentDetails()
         
         def buttonClick2():
-            #self.root.destroy()
+            self.root.destroy()
             att = Attendence()
 
         def buttonClick3():
