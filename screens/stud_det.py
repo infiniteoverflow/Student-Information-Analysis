@@ -1,5 +1,6 @@
 from tkinter import *
 #from PIL import Image, ImageTk
+from screens.student import StudentData
 
 class StudentDetails:
     def __init__(self):
@@ -30,16 +31,17 @@ class StudentDetails:
         self.button1.configure(width = 20, relief = FLAT)  
         button1_window = self.c.create_window(120, 250, anchor=NW, window=self.button1)
 
-        self.b1 = Button(self.c,text='Cick here!',bg='blue',fg='white',activebackground='black',activeforeground='white',width=15,height=2, font=("Times",15,'bold'),command=lambda:onClick1())
+        self.b1 = Button(self.c,text='Cick here!',bg='blue',fg='white',activebackground='black',activeforeground='white',width=15,height=2, font=("Times",15,'bold'),command=self.onClick1)
         self.b1.place(x=180,y=300,width=150,height=50)
 
     
 
         self.c.pack()
+        self.root.mainloop()
         
 
-        def onClick1():
-            bh = click()
-        self.root.mainloop()
+    def onClick1(self):
+        stu_data = StudentData(self.button1.get())
+        
 
 
