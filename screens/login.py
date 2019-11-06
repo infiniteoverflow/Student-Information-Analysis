@@ -77,6 +77,10 @@ class Login:
                 r.geometry('300x80')
             
                 lbl = Label(r,text = 'Incorrect username or password!',font=('Times',13,'bold'))
+                b1 = Button(r,text='OK',bg='white',fg='black',activebackground='black',activeforeground='white',width=5,height=2, font=("Times",8,'bold'),command=lambda:destroy())
+                b1.place(x=140,y=35,width=30,height=30)
                 lbl.pack()
-                r.mainloop()
-        
+              
+                def destroy():
+                     r.destroy() 
+                r.mainloop()      

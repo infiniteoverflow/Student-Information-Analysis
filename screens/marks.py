@@ -1,5 +1,5 @@
 from tkinter import *
-from PIL import Image, ImageeTK
+ #from PIL import Image, ImageeTK
 
 class Marks:
     def __init__(self):
