@@ -8,5 +8,5 @@ class StudentData:
         
         self.c = Canvas(self.root,bg = "gray",height=800,width=800,cursor='pencil')
         
-        self.c.pack()
+        self.c.pack
         self.root.mainloop()
