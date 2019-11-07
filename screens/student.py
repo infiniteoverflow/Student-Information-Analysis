@@ -23,4 +23,8 @@ class StudentData:
         self.c.place(relx=0.5, rely=0.5, anchor=CENTER)
         #self.c.pack
         self.root.mainloop()
+<<<<<<< HEAD
         
+=======
+        
+>>>>>>> 516352f86884007b38d8a5e446d4d49657f4b986
