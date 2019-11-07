@@ -36,11 +36,15 @@ class Menu:
 
         self.c.pack()
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:backFun())
 =======
         self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:back())
 >>>>>>> 516352f86884007b38d8a5e446d4d49657f4b986
+=======
+        self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
+>>>>>>> 205e43f1140c4a8a529937a0307171ba9b9f14e7
 
 
         self.b1 = Button(self.c,text='Student-Details',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=15,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
@@ -91,5 +95,9 @@ class Menu:
         
 =======
         
+<<<<<<< HEAD
 #a = Menu()
 >>>>>>> 516352f86884007b38d8a5e446d4d49657f4b986
+=======
+#a = Menu()
+>>>>>>> 205e43f1140c4a8a529937a0307171ba9b9f14e7

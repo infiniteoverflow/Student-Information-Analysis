@@ -24,7 +24,11 @@ class StudentData:
         #self.c.pack
         self.root.mainloop()
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
         
 >>>>>>> 516352f86884007b38d8a5e446d4d49657f4b986
+=======
+        
+>>>>>>> 205e43f1140c4a8a529937a0307171ba9b9f14e7
