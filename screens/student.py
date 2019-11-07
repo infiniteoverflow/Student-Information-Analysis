@@ -24,4 +24,3 @@ class StudentData:
         #self.c.pack
         self.root.mainloop()
         
-a = StudentData()

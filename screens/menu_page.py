@@ -1,13 +1,13 @@
 from tkinter import *
 from tkinter import messagebox
-from screens.login import *
 from screens.stud_det import *
 from screens.attendence import *
 from screens.electives import *
-from screens.login import *
+from screens.to_login import ToLogin
 from screens.marks import *
 from screens.placement import *
 from PIL import Image, ImageTk
+
 
 class Menu:
     def __init__(self):
@@ -34,7 +34,7 @@ class Menu:
 
         self.c.pack()
         
-        self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
+        self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:backFun())
 
 
         self.b1 = Button(self.c,text='Student-Details',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=15,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
@@ -51,8 +51,9 @@ class Menu:
         self.b4.place(x=300,y=540,width=200,height=50)
         self.b5.place(x=300,y=620,width=200,height=50)
         
-        def back():
-            back = Login()
+        def backFun():
+            back = ToLogin()
+            pass
 
         def buttonClick1():
             stud=StudentDetails()
@@ -74,4 +75,3 @@ class Menu:
 
         self.root.mainloop()
         
-a = Menu()
