@@ -69,7 +69,7 @@ class Login:
         
         if username==password:
             if username.startswith("1mv"):
-                self.root.destroy()
+               # self.root.destroy()
                 m = menu.Menu()
             else:
                 r = Tk()
@@ -82,6 +82,6 @@ class Login:
                 lbl.pack()
               
                 def destroy():
-                     r.destroy() 
+                  r.destroy() 
                 r.mainloop()      
         

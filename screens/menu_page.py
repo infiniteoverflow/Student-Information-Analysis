@@ -8,16 +8,18 @@ from screens.login import *
 from screens.marks import *
 from screens.placement import *
 from PIL import Image, ImageTk
+#import screens.login as log
 
 class Menu:
     def __init__(self):
 
-        self.root = Tk()
+        self.root = Toplevel()
         self.root.geometry("800x800")
         self.root.title("Menu")
         self.c = Canvas(self.root,bg = "gray",height=800,width=800)
-        image = Image.open("images/login_bg.jpg")
-        photo = ImageTk.PhotoImage(image)
+      #  image = Image.open("images/epic1.png")
+      #  photo = ImageTk.PhotoImage(image)
+        photo = PhotoImage(file = "images/epic1.png")
 
         
         # Setting the background
@@ -33,7 +35,7 @@ class Menu:
 
 
         self.c.pack()
-        self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
+        self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:back())
 
 
         self.b1 = Button(self.c,text='Student-Details',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=15,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
@@ -51,7 +53,9 @@ class Menu:
         self.b5.place(x=300,y=620,width=200,height=50)
         
         def back():
-            back = Login()
+            self.root.destroy()
+         #   b = log.Login()
+    
 
         def buttonClick1():
             stud=StudentDetails()
