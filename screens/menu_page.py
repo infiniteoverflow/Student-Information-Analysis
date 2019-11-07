@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+from screens.login import *
 from screens.stud_det import *
 from screens.attendence import *
 from screens.electives import *
@@ -32,6 +33,9 @@ class Menu:
 
 
         self.c.pack()
+        
+        self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
+
 
         self.b1 = Button(self.c,text='Student-Details',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=15,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
         self.b2 = Button(self.c,text='Attendance',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=15,height=2,font=("Times",15,'bold'),command=lambda:buttonClick2())
@@ -40,11 +44,15 @@ class Menu:
         self.b5 = Button(self.c,text='Placements-Details',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=15,height=2, font=("Times",15,'bold'),command=lambda:buttonClick5())
 
         
+        self.back.place(x=10,y=10,width=100,height=30)
         self.b1.place(x=300,y=300,width=200,height=50)
         self.b2.place(x=300,y=380,width=200,height=50)
         self.b3.place(x=300,y=460,width=200,height=50)
         self.b4.place(x=300,y=540,width=200,height=50)
         self.b5.place(x=300,y=620,width=200,height=50)
+        
+        def back():
+            back = Login()
 
         def buttonClick1():
             stud=StudentDetails()
@@ -65,3 +73,5 @@ class Menu:
             plac = Placement()       
 
         self.root.mainloop()
+        
+a = Menu()
