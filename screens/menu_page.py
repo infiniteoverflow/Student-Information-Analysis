@@ -33,7 +33,6 @@ class Menu:
 
 
         self.c.pack()
-        
         self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
 
 
@@ -74,4 +73,4 @@ class Menu:
 
         self.root.mainloop()
         
-a = Menu()
+#a = Menu()
