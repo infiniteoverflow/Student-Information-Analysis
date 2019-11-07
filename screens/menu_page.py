@@ -35,16 +35,7 @@ class Menu:
 
 
         self.c.pack()
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:backFun())
-=======
         self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:back())
->>>>>>> 516352f86884007b38d8a5e446d4d49657f4b986
-=======
-        self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
->>>>>>> 205e43f1140c4a8a529937a0307171ba9b9f14e7
 
 
         self.b1 = Button(self.c,text='Student-Details',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=15,height=2, font=("Times",15,'bold'),command=lambda:buttonClick1())
@@ -61,16 +52,10 @@ class Menu:
         self.b4.place(x=300,y=540,width=200,height=50)
         self.b5.place(x=300,y=620,width=200,height=50)
         
-<<<<<<< HEAD
-        def backFun():
-            back = ToLogin()
-            pass
-=======
         def back():
             self.root.destroy()
          #   b = log.Login()
     
->>>>>>> 516352f86884007b38d8a5e446d4d49657f4b986
 
         def buttonClick1():
             stud=StudentDetails()
@@ -91,13 +76,5 @@ class Menu:
             plac = Placement()       
 
         self.root.mainloop()
-<<<<<<< HEAD
         
-=======
-        
-<<<<<<< HEAD
 #a = Menu()
->>>>>>> 516352f86884007b38d8a5e446d4d49657f4b986
-=======
-#a = Menu()
->>>>>>> 205e43f1140c4a8a529937a0307171ba9b9f14e7
