@@ -9,7 +9,7 @@ class Login:
         self.root = Tk()
         self.root.geometry("800x800")
         self.root.title("Login")
-        
+                
         # Defining the canvas on which the widgets has to be placed
         self.c = Canvas(self.root,bg = "gray",height=800,width=800,cursor='pencil')
         

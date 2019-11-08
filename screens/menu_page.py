@@ -1,14 +1,14 @@
 from tkinter import *
 from tkinter import messagebox
-from screens.login import *
 from screens.stud_det import *
 from screens.attendence import *
 from screens.electives import *
-from screens.login import *
+from screens.to_login import ToLogin
 from screens.marks import *
 from screens.placement import *
 from PIL import Image, ImageTk
 #import screens.login as log
+
 
 class Menu:
     def __init__(self):
