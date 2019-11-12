@@ -16,8 +16,7 @@ class StudentDetails:
        # image = Image.open("images/login_bg.jpg")
        # photo = ImageTk.PhotoImage(image)
         photo = PhotoImage(file = "images/epic1.png")
-       # w = Label(self.root, image=photo)
-       # w.pack(
+       
         self.c.create_image((0,0), image=photo, anchor="nw")
 
        
