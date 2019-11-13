@@ -30,6 +30,7 @@ class Menu:
         self.fnt = ('latin modern typewriter',50,'bold')
         
         # Setting the text
+
         self.c.create_text((800, 150), text="MENU", fill="black", anchor="nw"
                            ,font=('newcenturyschlbk',50,'bold'))
 
@@ -42,6 +43,7 @@ class Menu:
         self.b2 = Button(self.c,text='Attendance',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5,font=("Times",20,'bold'),command=lambda:buttonClick2())
         self.b3 = Button(self.c,text='Marks',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5,font=("Times",20,'bold'),command=lambda:buttonClick3())
         self.b4 = Button(self.c,text='Electives',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5, font=("Times",20,'bold'),command=lambda:buttonClick4())
+
         self.b5 = Button(self.c,text='Placements-Details',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5, font=("Times",20,'bold'),command=lambda:buttonClick5())
 
         
