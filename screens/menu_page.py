@@ -79,4 +79,3 @@ class Menu:
 
         self.root.mainloop()
         
-#a = Menu()
