@@ -3,6 +3,8 @@ from PIL import Image, ImageTk
 
 import screens.menu_page as menu
 
+import sqlite3
+
 class Login:
     def __init__(self):
         # Defining the root window
@@ -63,27 +65,22 @@ class Login:
         username = self.button1.get()
         password = self.button2.get()
         
-        print(username.lower())
+        print(username)
         print(password)
         
-        username = username.lower()
-        password = password.lower()
         
-        if username==password:
-            if username.startswith("1mv"):
-               # self.root.destroy()
-                m = menu.Menu()
-            else:
-                r = Tk()
-                r.title('Error!')
-                r.geometry('300x80')
+           
+        connection = sqlite3.connect('databases/student.db')
+        
+        crsr = connection.cursor()
+        
+        sql_command = '''SELECT * FROM STUDENT_DETAILS WHERE USN='{}'; '''.format(username)
+        
+        crsr.execute(sql_command)
+        
+        row = crsr.fetchall()
             
-                lbl = Label(r,text = 'Incorrect username or password!',font=('Times',13,'bold'))
-                b1 = Button(r,text='OK',bg='white',fg='black',activebackground='black',activeforeground='white',width=5,height=2, font=("Times",8,'bold'),command=lambda:destroy())
-                b1.place(x=140,y=35,width=30,height=30)
-                lbl.pack()
-              
-                def destroy():
-                  r.destroy() 
-                r.mainloop()      
-        
+        if row[0][0] == username:
+            a = menu.Menu()
+        else:
+            print("No user")
