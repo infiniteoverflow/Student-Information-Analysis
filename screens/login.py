@@ -7,50 +7,50 @@ class Login:
     def __init__(self):
         # Defining the root window
         self.root = Tk()
-        self.root.geometry("800x800")
+        self.root.geometry("2000x1024")
         self.root.title("Login")
                 
         # Defining the canvas on which the widgets has to be placed
-        self.c = Canvas(self.root,bg = "gray",height=800,width=800,cursor='pencil')
+        self.c = Canvas(self.root,bg = "gray",height=2000,width=2024,cursor='pencil')
         
         # Setting the background image
-        image = Image.open("images/login_bg.jpg")
+        image = Image.open("images/b1.jpg")
         photo = ImageTk.PhotoImage(image)
         
         # Setting the background
         self.c.create_image((0,0), image=photo, anchor="nw")
-        self.f = Frame(self.root,height=800,width=800)
+        self.f = Frame(self.root,height=2000,width=2024)
         
         # Setting the font
         self.fnt = ('latin modern typewriter',50,'bold')
         
         # Setting the text
-        self.c.create_text((100, 150), text="Student Information Analysis", fill="black", anchor="nw"
+        self.c.create_text((600, 300), text="Student Information Analysis", fill="black", anchor="nw"
                            ,font=('newcenturyschlbk',30,'bold'))
-        self.c.create_text((280, 270), text="Login", fill="black", anchor="nw"
+        self.c.create_text((800, 400), text="Login", fill="black", anchor="nw"
                            ,font=self.fnt)
         
         # Setting the login entry boxes
-        self.c.create_text((190, 390), text="Username: ", fill="black", anchor="nw"
+        self.c.create_text((650, 610), text="Username: ", fill="black", anchor="nw"
                            ,font=('Times',30,'italic bold'))
         
         self.button1 = Entry(self.c,font=('Times',20,'bold'))
         self.button1.configure(width = 20, relief = FLAT)  
-        button1_window = self.c.create_window(380, 400, anchor=NW, window=self.button1)
+        button1_window = self.c.create_window(900, 615, anchor=NW, window=self.button1)
         
         
-        self.c.create_text((190, 480), text="Password: ", fill="black", anchor="nw"
+        self.c.create_text((650, 710), text="Password: ", fill="black", anchor="nw"
                            ,font=('Times',30,'italic bold'))
         
         self.button2 = Entry(self.c,font=('Times',20,'bold'),show="*")
         self.button2.configure(width = 20, relief = FLAT)  
-        button1_window = self.c.create_window(380, 490, anchor=NW, window=self.button2)
+        button1_window = self.c.create_window(900, 715, anchor=NW, window=self.button2)
         
         
         self.loginButton = Button(self.c,text="Login",width=15,height=2,bg='red',fg='white',command=self.credentials,
                                   font=("Times",15,'bold'))
         self.loginButton.configure(width=15,relief=FLAT)
-        login_button_window = self.c.create_window(380,560,anchor=NW,window=self.loginButton)
+        login_button_window = self.c.create_window(800,860,anchor=NW,window=self.loginButton)
         
         
         # Defining the window
