@@ -28,11 +28,11 @@ class StudentData:
         for i in range(len(attributes)): #Rows
             b = Label(self.c,text=attributes[i],bg="white",width=20,height=2,font=('Times',30,'bold'))
             b.grid(row=i, column=0)
-        for i in range(len(values)): #Rows
+        for i in range(len(row)): #Rows
             if len(str(i)) > 10:
-                b = Label(self.c,text=values[i],bg="white",width=20,height=2,font=('Times',20,'bold'))
+                b = Label(self.c,text=row[0][i],bg="white",width=20,height=2,font=('Times',20,'bold'))
             else:
-                b = Label(self.c,text=values[i],bg="white",width=20,height=2,font=('Times',30,'bold'))
+                b = Label(self.c,text=row[0][i],bg="white",width=20,height=2,font=('Times',30,'bold'))
             b.grid(row=i, column=2)
                 
         self.c.place(relx=0.5, rely=0.5, anchor=CENTER)

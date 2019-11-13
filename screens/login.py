@@ -69,30 +69,9 @@ class Login:
         print(username)
         print(password)
         
-        username = username.lower()
-        password = password.lower()
+        username = username.upper()
+        password = password.upper()
         
-        if username==password:
-            if username.startswith("1mv"):
-               # self.root.destroy()
-                m = menu.Menu()
-            else:
-                r = Tk()
-                r.title('Error!')
-                r.geometry('300x80')
-            
-                lbl = Label(r,text = 'Incorrect username or password!',font=('Times',13,'bold'))
-                b1 = Button(r,text='OK',bg='white',fg='black',activebackground='black',activeforeground='white',width=5,height=2, font=("Times",8,'bold'),command=lambda:destroy())
-                b1.place(x=140,y=35,width=30,height=30)
-                lbl.pack()
-                
-                def destroy():
-                    r.destroy() 
-                
-
-                r.mainloop()      
-        
-           
         connection = sqlite3.connect('databases/student.db')
         
         crsr = connection.cursor()
@@ -102,8 +81,22 @@ class Login:
         crsr.execute(sql_command)
         
         row = crsr.fetchall()
-            
-        if row[0][0] == username:
+        
+        if len(row)!=0 and row[0][0] == username and username==password:
             a = menu.Menu()
         else:
-            print("No user")
+            r = Tk()
+            r.title('Error!')
+            r.geometry('300x80')
+            
+            lbl = Label(r,text = 'Incorrect username or password!',font=('Times',13,'bold'))
+            b1 = Button(r,text='OK',bg='white',fg='black',activebackground='black',activeforeground='white',width=5,height=2, font=("Times",8,'bold'),command=lambda:destroy())
+            b1.place(x=140,y=35,width=30,height=30)
+            lbl.pack()
+                
+            def destroy():
+                r.destroy() 
+                
+
+            r.mainloop()      
+    
