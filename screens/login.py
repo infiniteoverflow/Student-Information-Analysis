@@ -1,6 +1,7 @@
 from tkinter import *
 from PIL import Image, ImageTk
 
+
 import screens.menu_page as menu
 
 class Login:
@@ -82,8 +83,10 @@ class Login:
                 b1 = Button(r,text='OK',bg='white',fg='black',activebackground='black',activeforeground='white',width=5,height=2, font=("Times",8,'bold'),command=lambda:destroy())
                 b1.place(x=140,y=35,width=30,height=30)
                 lbl.pack()
-              
+                
                 def destroy():
-                  r.destroy() 
+                    r.destroy() 
+                
+
                 r.mainloop()      
         

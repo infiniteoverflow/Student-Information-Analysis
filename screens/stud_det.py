@@ -32,7 +32,11 @@ class StudentDetails:
 
         self.b1 = Button(self.c,text='Cick here!',bg='blue',fg='white',activebackground='black',activeforeground='white',width=15,height=2, font=("Times",15,'bold'),command=self.onClick1)
         self.b1.place(x=900,y=400,width=150,height=50)
+        self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:back())
+        self.back.place(x=1000,y=900,width=200,height=30)
 
+        def back():
+            self.root.destroy() 
     
 
         self.c.pack()
