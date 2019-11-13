@@ -24,6 +24,8 @@ class StudentData:
             b.grid(row=i, column=2)
                 
         self.c.place(relx=0.5, rely=0.5, anchor=CENTER)
-        #self.c.pack
+
+        
+        #self.c.pack()
         self.root.mainloop()
         
