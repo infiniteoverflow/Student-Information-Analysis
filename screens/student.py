@@ -1,4 +1,5 @@
 from tkinter import *
+import sqlite3
 
 class StudentData:
     def __init__(self,usn):
@@ -9,7 +10,18 @@ class StudentData:
         self.c = Canvas(self.root,bg = "gray",height=800,width=800,cursor='pencil')
         
         attributes = ['Name','Branch','Semester','Email','Address','Mobile']
-        values = ['Aswin','CSE','5','aswingopinathan1871@gmail.com','msmdksmdksmdkmfkdmvkd\njnfknfks','9072215663']
+        
+        connection = sqlite3.connect('databases/student.db')
+            
+        cursor = connection.cursor()
+            
+        sql_command = '''SELECT * FROM STUDENT_DETAILS WHERE USN='{}';'''.format(usn)
+            
+        cursor.execute(sql_command)
+            
+        row = cursor.fetchall()
+            
+        print(row)
         
         height = 5
         width = 5
@@ -26,4 +38,7 @@ class StudentData:
         self.c.place(relx=0.5, rely=0.5, anchor=CENTER)
         #self.c.pack
         self.root.mainloop()
+        
+        def disp_details(self):
+            pass
         
