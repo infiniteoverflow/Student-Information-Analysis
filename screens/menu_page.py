@@ -47,7 +47,7 @@ class Menu:
         self.b5 = Button(self.c,text='Placements-Details',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5, font=("Times",20,'bold'),command=lambda:buttonClick5())
 
         
-        self.back.place(x=20,y=20,width=200,height=30)
+        self.back.place(x=1000,y=900,width=200,height=30)
         self.b1.place(x=800,y=300,width=300,height=50)
         self.b2.place(x=800,y=380,width=300,height=50)
         self.b3.place(x=800,y=460,width=300,height=50)
