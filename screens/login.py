@@ -20,12 +20,14 @@ class Login:
         # Setting the background
         self.c.create_image((0,0), image=photo, anchor="nw")
         self.f = Frame(self.root,height=2000,width=2024)
+
+        
         
         # Setting the font
         self.fnt = ('latin modern typewriter',50,'bold')
         
         # Setting the text
-        self.c.create_text((600, 300), text="Student Information Analysis", fill="black", anchor="nw"
+        self.c.create_text((600, 300),text="Student Information Analysis", fill="black", anchor="nw"
                            ,font=('newcenturyschlbk',30,'bold'))
         self.c.create_text((800, 400), text="Login", fill="black", anchor="nw"
                            ,font=self.fnt)
