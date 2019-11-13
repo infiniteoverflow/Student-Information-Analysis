@@ -4,6 +4,8 @@ from PIL import Image, ImageTk
 
 import screens.menu_page as menu
 
+import sqlite3
+
 class Login:
     def __init__(self):
         # Defining the root window
@@ -64,7 +66,7 @@ class Login:
         username = self.button1.get()
         password = self.button2.get()
         
-        print(username.lower())
+        print(username)
         print(password)
         
         username = username.lower()
@@ -90,3 +92,18 @@ class Login:
 
                 r.mainloop()      
         
+           
+        connection = sqlite3.connect('databases/student.db')
+        
+        crsr = connection.cursor()
+        
+        sql_command = '''SELECT * FROM STUDENT_DETAILS WHERE USN='{}'; '''.format(username)
+        
+        crsr.execute(sql_command)
+        
+        row = crsr.fetchall()
+            
+        if row[0][0] == username:
+            a = menu.Menu()
+        else:
+            print("No user")
