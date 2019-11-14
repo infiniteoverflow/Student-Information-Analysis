@@ -7,10 +7,11 @@ from screens.to_login import ToLogin
 from screens.marks import *
 from screens.placement import *
 from PIL import Image, ImageTk
+from screens.placement_det import *
 #import screens.login as log
 
 
-class Menu:
+class Placement:
     def __init__(self):
 
         self.root = Toplevel()
@@ -19,7 +20,7 @@ class Menu:
         self.c = Canvas(self.root,bg = "gray",height=2000,width=2024)
       #  image = Image.open("images/epic1.png")
       #  photo = ImageTk.PhotoImage(image)
-        photo = PhotoImage(file = "images/plac.jpg")
+        photo = PhotoImage(file = "images/plac.png")
 
         
         # Setting the background
@@ -31,7 +32,7 @@ class Menu:
         
         # Setting the text
 
-        self.c.create_text((700, 150), text="SELECT BRANCH", fill="black", anchor="nw"
+        self.c.create_text((600, 150), text="SELECT BRANCH", fill="black", anchor="nw"
                            ,font=('newcenturyschlbk',50,'bold'))
 
 
@@ -39,13 +40,13 @@ class Menu:
         self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",15,'bold'),command=lambda:back())
 
 
-        self.b1 = Button(self.c,text='CSE',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5, font=("Times",20,'bold'),command=lambda:buttonClick1())
-        self.b2 = Button(self.c,text='ISE',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5,font=("Times",20,'bold'),command=lambda:buttonClick2())
-        self.b3 = Button(self.c,text='ECE',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5,font=("Times",20,'bold'),command=lambda:buttonClick3())
-        self.b4 = Button(self.c,text='TC',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5, font=("Times",20,'bold'),command=lambda:buttonClick4())
+        self.b1 = Button(self.c,text='CSE',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=7, font=("Times",25,'bold'),command=lambda:buttonClick('CSE'))
+        self.b2 = Button(self.c,text='ISE',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=7,font=("Times",25,'bold'),command=lambda:buttonClick('ISE'))
+        self.b3 = Button(self.c,text='ECE',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=7,font=("Times",25,'bold'),command=lambda:buttonClick('ECE'))
+        self.b4 = Button(self.c,text='TC',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=7, font=("Times",25,'bold'),command=lambda:buttonClick('TC'))
 
-        self.b5 = Button(self.c,text='ME',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5, font=("Times",20,'bold'),command=lambda:buttonClick5())
-        self.b6 = Button(self.c,text='IEM',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=5, font=("Times",20,'bold'),command=lambda:buttonClick6())
+        self.b5 = Button(self.c,text='ME',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=7, font=("Times",25,'bold'),command=lambda:buttonClick('ME'))
+        self.b6 = Button(self.c,text='IEM',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=7, font=("Times",25,'bold'),command=lambda:buttonClick('IEM'))
 
         
         self.back.place(x=1000,y=900,width=200,height=30)
@@ -61,28 +62,8 @@ class Menu:
          #   b = log.Login()
     
 
-        def buttonClick1():
-            s = StudentDetails()
-
-        def buttonClick2():
-            att = Attendence()
-
-        def buttonClick3():
-            #self.root.destroy()
-            marks = Marks()
-
-        def buttonClick4():
-            #self.root.destroy()
-            ele = Electives()
-
-        def buttonClick5():
-            #self.root.destroy()
-            plac = Placement()
-            
-        def buttonClick6():
-            #self.root.destroy()
-            plac = Placement()       
+        def buttonClick(branch):
+            a = PlacementDetails(branch)
 
         self.root.mainloop()
         
-a = Menu()
