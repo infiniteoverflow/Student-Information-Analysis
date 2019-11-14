@@ -43,3 +43,5 @@ class Stud_attendance():
         self.c.pack()
 
         self.root.mainloop()
+
+a = Stud_attendance()
