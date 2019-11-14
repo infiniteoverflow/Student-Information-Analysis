@@ -103,7 +103,7 @@ class Teach_attendance:
             connection = sqlite3.connect('databases/student.db')
             cursor = connection.cursor()
             
-            cursor.execute('''SELECT NAME,BRANCH FROM STUDENT_DETAILS WHERE USN='{}';'''.format(usn))
+            cursor.execute('''SELECT NAME,BRANCH FROM STUDENT_DETAILS WHERE USN='{}';'''.format(usn.upper()))
             
             row = cursor.fetchall()
             
@@ -123,6 +123,8 @@ class Teach_attendance:
                 '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'PROF_1',p),
                 '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'OPEN_1',o)
             ]
+            
+            
             
             for commands in sql_commands:
                 cursor.execute(commands)
