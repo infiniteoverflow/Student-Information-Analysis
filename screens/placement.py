@@ -21,7 +21,7 @@ class Placement:
         self.c = Canvas(self.root,bg = "gray",height=2000,width=2024)
       #  image = Image.open("images/epic1.png")
       #  photo = ImageTk.PhotoImage(image)
-        photo = PhotoImage(file = "images/plac.jpg"
+        photo = PhotoImage(file = "images/plac.png")
         
         # Setting the background
         self.c.create_image((0,0), image=photo, anchor="nw")
@@ -59,8 +59,6 @@ class Placement:
         self.b5 = Button(self.c,text='ME',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=7, font=("Times",25,'bold'),command=lambda:buttonClick('ME'))
         self.b6 = Button(self.c,text='IEM',bg='yellow',fg='blue',activebackground='black',activeforeground='white',width=20,height=7, font=("Times",25,'bold'),command=lambda:buttonClick('IEM'))
 
-        
-        self.back.place(x=1000,y=900,width=200,height=30)
         self.b1.place(x=800,y=300,width=300,height=50)
         self.b2.place(x=800,y=380,width=300,height=50)
         self.b3.place(x=800,y=460,width=300,height=50)

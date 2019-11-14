@@ -31,9 +31,6 @@ class Stud_attendance():
         self.back = Button(self.c,text='Submit',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",20,'bold'),command=lambda:submit())
         self.back.place(x=1250,y=900,width=100,height=40)
 
-        self.back = Button(self.c,text='Submit',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",20,'bold'),command=lambda:back())
-        self.back.place(x=1300,y=900,width=100,height=40)
-
 
         def back():
             self.root.destroy()
@@ -54,6 +51,4 @@ class Stud_attendance():
 
 
 
-
-        s
 

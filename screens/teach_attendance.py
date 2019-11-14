@@ -29,9 +29,7 @@ class Teach_attendance:
         self.button0.configure(width = 20, relief = FLAT)  
         button1_window = self.c.create_window(900, 355, anchor=NW, window=self.button0)
         
-        self.c.create_text((650, 450), text="17CS51: ", fill="black", anchor="nw
-        self.c.create_text((650, 410), text="1CS51: ", fill="black", anchor="nw"
-
+        self.c.create_text((650, 450), text="17CS51: ", fill="black", anchor="nw"
                            ,font=('Times',30,'italic bold'))
         
         self.button1 = Entry(self.c,font=('Times',20,'bold'))
