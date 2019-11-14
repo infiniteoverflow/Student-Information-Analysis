@@ -115,15 +115,23 @@ class Teach_attendance:
             cursor = connection.cursor()
 
             
-            sql_commands = [
-                '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'17CS51',cs51),
-                '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'17CS52',cs52),
-                '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'17CS53',cs53),
-                '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'17CS54',cs54),
-                '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'PROF_1',p),
-                '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'OPEN_1',o)
-            ]
+            #sql_commands = [
+            #    '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'17CS51',cs51),
+            #    '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'17CS52',cs52),
+            #    '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'17CS53',cs53),
+            #    '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'17CS54',cs54),
+            #    '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'PROF_1',p),
+            #    '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'OPEN_1',o)
+            #]
             
+            sql_commands = [
+                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(cs51,usn,'17CS51'),
+                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(cs52,usn,'17CS52'),
+                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(cs53,usn,'17CS53'),
+                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(cs54,usn,'17CS54'),
+                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(p,usn,'PROF_ELE'),
+                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(o,usn,'OPEN_ELE'),
+            ]
             
             
             for commands in sql_commands:
@@ -137,4 +145,3 @@ class Teach_attendance:
 
         self.root.mainloop()
         
-a = Teach_attendance()

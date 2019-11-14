@@ -60,7 +60,7 @@ class Menu:
     
 
         def buttonClick1():
-            stud=StudentDetails()
+            s = StudentDetails()
 
         def buttonClick2():
             att = Attendence()
