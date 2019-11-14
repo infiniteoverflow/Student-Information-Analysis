@@ -46,7 +46,6 @@ class StudentDetails:
     def onClick1(self):
         stu_data = StudentData(self.button1.get())
         
-a = StudentDetails()
         
 
 
