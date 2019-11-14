@@ -44,4 +44,3 @@ class Stud_attendance():
 
         self.root.mainloop()
 
-a = Stud_attendance()
