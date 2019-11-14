@@ -1,5 +1,7 @@
 from tkinter import *
+
 import sqlite3
+
 
 class Teach_attendance:
     def __init__(self):
@@ -27,17 +29,21 @@ class Teach_attendance:
         self.button0.configure(width = 20, relief = FLAT)  
         button1_window = self.c.create_window(900, 355, anchor=NW, window=self.button0)
         
-        self.c.create_text((650, 450), text="17CS51: ", fill="black", anchor="nw"
+        self.c.create_text((650, 450), text="17CS51: ", fill="black", anchor="nw
+        self.c.create_text((650, 410), text="1CS51: ", fill="black", anchor="nw"
+
                            ,font=('Times',30,'italic bold'))
         
         self.button1 = Entry(self.c,font=('Times',20,'bold'))
         self.button1.configure(width = 20, relief = FLAT)  
+
         button1_window = self.c.create_window(900, 455, anchor=NW, window=self.button1)
 
 
 
 
         self.c.create_text((650, 550), text="17CS52: ", fill="black", anchor="nw"
+
                            ,font=('Times',30,'italic bold'))
         
         self.button2 = Entry(self.c,font=('Times',20,'bold'))
@@ -47,49 +53,70 @@ class Teach_attendance:
 
 
         self.c.create_text((650, 650), text="17CS53: ", fill="black", anchor="nw"
+
+        
+
                            ,font=('Times',30,'italic bold'))
         
         self.button3 = Entry(self.c,font=('Times',20,'bold'))
         self.button3.configure(width = 20, relief = FLAT)  
+
         button1_window = self.c.create_window(900, 655, anchor=NW, window=self.button3)
 
 
 
         self.c.create_text((650, 750), text="17CS54: ", fill="black", anchor="nw"
+
                            ,font=('Times',30,'italic bold'))
         
         self.button4 = Entry(self.c,font=('Times',20,'bold'))
         self.button4.configure(width = 20, relief = FLAT)  
+
         button1_window = self.c.create_window(900, 755, anchor=NW, window=self.button4)
 
 
 
         self.c.create_text((90, 850), text="PROFESSIONAL ELECTIVE1/ELECTIVE2: ", fill="black", anchor="nw"
+
+        
+
+
+
+        
                            ,font=('Times',30,'italic bold'))
         
         self.button5 = Entry(self.c,font=('Times',20,'bold'))
         self.button5.configure(width = 20, relief = FLAT)  
+
         button1_window = self.c.create_window(900, 855, anchor=NW, window=self.button5)
 
 
 
         self.c.create_text((250, 950), text="OPEN ELECTIVE1/ELECTIVE2: ", fill="black", anchor="nw"
+
+        
                            ,font=('Times',30,'italic bold'))
         
         self.button6 = Entry(self.c,font=('Times',20,'bold'))
         self.button6.configure(width = 20, relief = FLAT)  
+
         button1_window = self.c.create_window(900, 955, anchor=NW, window=self.button6)
+
+        
 
 
         self.back = Button(self.c,text='Back',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",20,'bold'),command=lambda:back())
         self.back.place(x=1400,y=900,width=100,height=40)
 
+
         self.back = Button(self.c,text='Submit',bg='red',fg='white',activebackground='black',activeforeground='white',width=10,height=2, font=("Times",20,'bold'),command=lambda:submit())
+
         self.back.place(x=1300,y=900,width=100,height=40)
 
 
         def back():
             self.root.destroy()
+
             
         def submit():
             usn = self.button0.get()
@@ -144,4 +171,18 @@ class Teach_attendance:
         self.c.pack()
 
         self.root.mainloop()
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
         
