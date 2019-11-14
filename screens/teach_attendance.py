@@ -124,15 +124,15 @@ class Teach_attendance:
             #    '''INSERT INTO ATTENDANCE VALUES('{}','{}','{}','{}','{}');'''.format(usn,name,branch,'OPEN_1',o)
             #]
             
+            
             sql_commands = [
                 '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(cs51,usn,'17CS51'),
                 '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(cs52,usn,'17CS52'),
                 '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(cs53,usn,'17CS53'),
                 '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(cs54,usn,'17CS54'),
-                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(p,usn,'PROF_ELE'),
-                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(o,usn,'OPEN_ELE'),
+                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(p,usn,'PROF_1'),
+                '''UPDATE ATTENDANCE SET ATT='{}' WHERE USN='{}' AND SUB_CODE='{}' '''.format(o,usn,'OPEN_1')
             ]
-            
             
             for commands in sql_commands:
                 cursor.execute(commands)
