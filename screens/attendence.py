@@ -1,6 +1,6 @@
 from tkinter import *
 from screens.stud_attendance import *
-from screens.teach_attendance import *
+from screens.authenticate import *
 class Attendence:
     def __init__(self):
         self.root = Toplevel()
@@ -31,7 +31,8 @@ class Attendence:
         def buttonClick1():
             stud=Stud_attendance()
         def buttonClick2():
-            teach = Teach_attendance()
+            
+            teach = Authenticate()
 
 
         
