@@ -1,4 +1,6 @@
 from tkinter import *
+from screens.teach_attendance import *
+
 
 class Authenticate:
     def __init__(self):
@@ -38,7 +40,8 @@ class Authenticate:
         button1_window = self.c.create_window(900, 715, anchor=NW, window=self.button2)
         
         
-        self.loginButton = Button(self.c,text="Submit",width=15,height=2,bg='red',fg='white',command=lambda:ONCLICK(),
+        self.loginButton = Button(self.c,text="Submit",width=15,height=2,bg='red',fg='white',command=lambda:authenticate(),
+
                                   font=("Times",15,'bold'))
         self.loginButton.configure(width=15,relief=FLAT)
         login_button_window = self.c.create_window(800,860,anchor=NW,window=self.loginButton)
@@ -50,7 +53,13 @@ class Authenticate:
         def back():
             self.root.destroy() 
 
-        
+        def authenticate():
+            username = self.button1.get()
+            password = self.button2.get()
+            
+            if username.upper() == password.upper() and username.upper() == "ADMIN": 
+                a = Teach_attendance()
+
         
         self.c.pack()
         self.root.mainloop()
