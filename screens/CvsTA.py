@@ -7,7 +7,7 @@ class CvsTa:
     def __init__(self):
         self.root = tk.Tk()
         self.root.geometry("700x700")
-        self.root.title("Placement Details for {}".format('CSE'))
+        self.root.title("Placement Details for {}".format('IEM'))
 
         df = pd.read_csv('./databases/placement.csv')
 

@@ -76,3 +76,4 @@ class Placement:
 
         self.root.mainloop()
         
+a = Placement()
