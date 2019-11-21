@@ -7,15 +7,15 @@ import pandas as pd
 
 df = pd.read_csv('./databases/placement.csv')
 
-a = 'TC'
+a = 'CSE'
 a_df = df[df['BRANCH']==a]
-tot_app = a_df['TOTAL_APPEARED']
-tot_plac = a_df['TOTAL_PLACED']
+a_df
+
 x = a_df['COMPANY_NAME']
+y = a_df['HIGHEST_PACKAGE']
 
-df1 = a_df[['COMPANY_NAME', 'TOTAL_APPEARED','TOTAL_PLACED']].groupby('COMPANY_NAME').sum()
-
-print(a_df)
+df1 = a_df[['COMPANY_NAME','HIGHEST_PACKAGE']] \
+            .groupby('COMPANY_NAME').sum()
 
 root= tk.Tk() 
 root.geometry("700x700")
