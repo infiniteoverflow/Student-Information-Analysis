@@ -7,4 +7,5 @@ class ShowMarks:
         self.root.geometry("2000x1024")
         self.root.title("{} Marks".format(self.usn))
 
+        
         self.root.mainloop()
