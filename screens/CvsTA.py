@@ -13,6 +13,7 @@ class CvsTa:
 
         a_df = df[df['BRANCH']=='ISE']
 
+
         total_app = a_df['TOTAL_APPEARED']
         total_placed = a_df['TOTAL_PLACED']
 
