@@ -11,7 +11,7 @@ class CvsTa:
 
         df = pd.read_csv('./databases/placement.csv')
 
-        a_df = df[df['BRANCH']=='CSE']
+        a_df = df[df['BRANCH']=='ISE']
 
         total_app = a_df['TOTAL_APPEARED']
         total_placed = a_df['TOTAL_PLACED']
