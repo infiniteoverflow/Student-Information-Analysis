@@ -4,10 +4,10 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 import pandas as pd
 
+
 df = pd.read_csv('./databases/placement.csv')
 
-a = 'ECE'
-
+a = 'TC'
 a_df = df[df['BRANCH']==a]
 tot_app = a_df['TOTAL_APPEARED']
 tot_plac = a_df['TOTAL_PLACED']
@@ -18,7 +18,7 @@ df1 = a_df[['COMPANY_NAME', 'TOTAL_APPEARED','TOTAL_PLACED']].groupby('COMPANY_N
 print(a_df)
 
 root= tk.Tk() 
-root.geometry("600x600")
+root.geometry("700x700")
   
 
 figure1 = plt.Figure(figsize=(7,7), dpi=70)
